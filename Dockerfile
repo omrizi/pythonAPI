@@ -4,12 +4,12 @@ MAINTAINER OMRIKI
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
-RUN pip install -r /requirments.txt
+RUN pip install -r /requirements.txt
 
 RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
-RUN add user -D pythonUser
+RUN adduser -D pythonUser
 USER pythonUser
 
